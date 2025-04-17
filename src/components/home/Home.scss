@@ -1,0 +1,50 @@
+.home {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+
+    & .home-left {
+        & img {
+            width: 400px;
+        }
+    }
+
+    & .home-right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        & h1 {
+            & span {
+                color: #ff3838;
+            }
+        }
+
+        & p {
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+
+        & .home-left{
+            & img{
+                width: 300px;
+            }
+        }
+
+        & .home-right {
+            width: 80%;
+
+            & h2 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -68,7 +68,7 @@ export const Header = () => {
             color:'#ff3838',
             background:'black'
           }
-        }}>
+        }} href='https://www.linkedin.com/in/dinesh-babu-s/'>
           Contact
         </Button>
       </List>
