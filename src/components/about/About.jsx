@@ -102,14 +102,15 @@ export const About = () => {
                     </Card>
                 </div>
                 <div className="about-des">
-                <Paper elevation={3} >
+                <Paper elevation={3} sx={{padding:'20px',width:'40%',display:'flex',alignItems:'center',justifyContent:'space-around'}}>
                     <h1>30+</h1>
                     <h4>Projects</h4>
                 </Paper>
-                <Paper elevation={3} >
-                    <h1>3</h1>
+                <Paper elevation={3} sx={{padding:'20px',width:'40%',display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+                    <h1>3+</h1>
                     <h4>Internships</h4>
                 </Paper>
+                
                 </div>
             </div>
         </div>
