@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
+import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 
 
@@ -101,7 +102,14 @@ export const About = () => {
                     </Card>
                 </div>
                 <div className="about-des">
-                    
+                <Paper elevation={3} >
+                    <h1>30+</h1>
+                    <h4>Projects</h4>
+                </Paper>
+                <Paper elevation={3} >
+                    <h1>3</h1>
+                    <h4>Internships</h4>
+                </Paper>
                 </div>
             </div>
         </div>
