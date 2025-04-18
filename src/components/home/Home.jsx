@@ -26,7 +26,7 @@ export const Home = () => {
                     With hands-on exposure from multiple internships, I combine technical knowledge, teamwork, and design thinking to deliver scalable digital solutions.
                     Always eager to learn, I bring a strong foundation in frontend development, backend integration, and data handling across diverse projects.
                 </p>
-                <Button variant="contained" endIcon={<DownloadForOfflineIcon/>} sx={{background:'#ff3838',fontFamily:'poppins',fontSize:'1rem'}} onClick={Download}>
+                <Button variant="contained" endIcon={<DownloadForOfflineIcon/>} sx={{background:'#ff3838',fontFamily:'poppins',fontSize:'1rem',marginTop:'10px'}} onClick={Download}>
                     Download CV
                 </Button>
             </div>
