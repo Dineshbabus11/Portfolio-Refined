@@ -1,0 +1,23 @@
+.about{
+    padding: 20px;
+    margin-top: 40px;
+    & h1{
+        color: #ff3838;
+    }
+
+    & .about-content{
+        display: flex;
+        padding: 50px;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 768px){
+    .about{
+        & .about-content{
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
