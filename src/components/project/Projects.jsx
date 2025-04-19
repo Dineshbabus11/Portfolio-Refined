@@ -111,7 +111,7 @@ export const Projects = () => {
                                             <Typography
                                                 component="span"
                                                 variant="body2"
-                                                sx={{ color: '#ff3838', fontFamily: 'poppins',fontSize:'1.2rem' }}
+                                                sx={{ color: '#ff3838', fontFamily: 'poppins',fontSize:'1.2rem'}}
                                             >
                                                 {project.title}
                                             </Typography>
