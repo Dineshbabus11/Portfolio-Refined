@@ -1,0 +1,12 @@
+.experience{
+    & h1{
+        color: #ff3838;
+        padding: 20px;
+    }
+    & .experience-content{
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
