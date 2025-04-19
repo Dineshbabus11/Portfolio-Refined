@@ -3,4 +3,18 @@
         color: #ff3838;
         padding: 20px;
     }
+    & .projects-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        gap: 5%;
+        & .content{
+            width: 350px;
+        }
+        @media (max-width:756px){
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 }
