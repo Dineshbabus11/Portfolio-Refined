@@ -87,7 +87,7 @@ export const Projects = () => {
             <h1>Projects</h1>
             <div className="projects-content">
                 <div className="content">
-                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' }}>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' ,borderRadius:'10px'}}>
                         {projectList.map((project, index) => (
                             <React.Fragment key={index}>
                                 <ListItem
@@ -134,7 +134,7 @@ export const Projects = () => {
                 </div>
 
                 <div className="content">
-                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' }}>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' ,borderRadius:'10px'}}>
                         {projectList1.map((project, index) => (
                             <React.Fragment key={index}>
                                 <ListItem
@@ -181,7 +181,7 @@ export const Projects = () => {
                 </div>
 
                 <div className="content">
-                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' }}>
+                    <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'rgb(78,70,70)' ,borderRadius:'10px'}}>
                         {projectList2.map((project, index) => (
                             <React.Fragment key={index}>
                                 <ListItem
