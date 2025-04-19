@@ -3,6 +3,9 @@
     margin-top: 40px;
     & h1{
         color: #ff3838;
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
     }
 
     & .about-content{
@@ -49,8 +52,6 @@
         & .about-content{
             flex-direction: column;
             gap: 20px;
-        }
-        & .about-des{
         }
     }
 }

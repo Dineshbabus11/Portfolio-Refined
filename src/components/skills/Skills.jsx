@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 import { Tabs, Tab, Box, Grid, Paper, Typography } from "@mui/material";
-import { Code, Build } from "@mui/icons-material";
-import './Skills.scss'
-import { FaJava } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
+import './Skills.scss';
+
+// Icons
+import { FaJava, FaReact, FaHtml5, FaPython, FaGitSquare, FaGithubSquare } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
 import { DiJavascript } from "react-icons/di";
-import { FaPython } from "react-icons/fa";
-import { FaGitSquare } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
-import { SiPostman } from "react-icons/si";
+import { SiPostman, SiEclipseide } from "react-icons/si";
 import { PiFigmaLogoBold } from "react-icons/pi";
 import { VscVscode } from "react-icons/vsc";
-import { SiEclipseide } from "react-icons/si";
-
-
 
 const languagesFrameworks = [
     { name: "Java", icon: <FaJava style={{ color: "white" }} /> },
@@ -36,18 +29,25 @@ const tools = [
 ];
 
 const SkillTab = ({ items }) => (
-    <Grid container spacing={2} padding={2} sx={{ alignItems: 'center', justifyContent: 'center' }}>
+    <Grid container spacing={3} sx={{ justifyContent: 'center' }}>
         {items.map((item, index) => (
-            <Grid item xs={6} sm={4} md={3} key={index} >
+            <Grid item xs={6} sm={4} md={3} key={index}>
                 <Paper elevation={3} sx={{
-                    p: 2, textAlign: "center", background: 'black', cursor: 'pointer', transition: 'transform 0.2s ease,color 0.2s ease',
+                    p: 3,
+                    background: 'black',
+                    textAlign: 'center',
+                    borderRadius: '12px',
+                    transition: 'transform 0.2s ease-in-out',
+                    cursor: 'pointer',
                     '&:hover': {
-                        background: 'rgb(78, 70, 70)',
-                        transform: 'scale(1.1)'
+                        transform: 'scale(1.1)',
+                        background: 'rgb(78, 70, 70)'
                     }
                 }}>
-                    <Box sx={{ fontSize: 40, width: '150px' }}>{item.icon}</Box>
-                    <Typography variant="subtitle1" sx={{ fontFamily: 'poppins', color: '#ff3838' }}>{item.name}</Typography>
+                    <Box sx={{ fontSize: 40, mb: 1 }}>{item.icon}</Box>
+                    <Typography sx={{ fontFamily: 'Poppins', color: '#ff3838' }}>
+                        {item.name}
+                    </Typography>
                 </Paper>
             </Grid>
         ))}
@@ -55,49 +55,45 @@ const SkillTab = ({ items }) => (
 );
 
 export const Skills = () => {
-
     const [tabIndex, setTabIndex] = useState(0);
 
-    const handleChange = (e, newValue) => {
+    const handleChange = (event, newValue) => {
         setTabIndex(newValue);
     };
 
     return (
-        <div className="skills">
+        <div className="skills" id="skills">
             <h1>Skills</h1>
             <div className="skills-content">
-                <Box sx={{ width: "100%", mt: 4 }}>
-                    <Tabs value={tabIndex} onChange={handleChange} centered
-                        TabIndicatorProps={{
-                            style: {
-                                backgroundColor: '#ff3838'
-                            }
-                        }}>
-                        <Tab label="Languages & Frameworks" sx={{
-                            color: tabIndex === 0 ? '#ff3838' : 'white',
-                            fontFamily: 'poppins',
-                            transition: 'color 0.3s ease',
-                            '&:focus': {
-                                color: 'white',
-                            },
-                        }} />
-                        <Tab label="Tools" sx={{
-                            color: tabIndex === 1 ? '#ff3838' : 'white',
-                            fontFamily: 'poppins',
-                            transition: 'color 0.3s ease',
-                            '&:focus': {
-                                color: 'white',
-                            },
-                        }} />
+                <Box sx={{ width: "100%" }}>
+                    <Tabs
+                        value={tabIndex}
+                        onChange={handleChange}
+                        centered
+                        TabIndicatorProps={{ style: { backgroundColor: "#ff3838" } }}
+                    >
+                        <Tab label="Languages & Frameworks"
+                            sx={{
+                                color: tabIndex === 0 ? '#ff3838' : 'white',
+                                fontFamily: 'Poppins',
+                                fontWeight: 600
+                            }}
+                        />
+                        <Tab label="Tools"
+                            sx={{
+                                color: tabIndex === 1 ? '#ff3838' : 'white',
+                                fontFamily: 'Poppins',
+                                fontWeight: 600
+                            }}
+                        />
                     </Tabs>
-                    <Box sx={{
-                        marginTop: '40px'
-                    }}>
+
+                    <Box sx={{ mt: 5 }}>
                         {tabIndex === 0 && <SkillTab items={languagesFrameworks} />}
                         {tabIndex === 1 && <SkillTab items={tools} />}
                     </Box>
                 </Box>
             </div>
         </div>
-    )
-}
+    );
+};

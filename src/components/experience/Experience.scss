@@ -1,12 +1,33 @@
-.experience{
-    & h1{
-        color: #ff3838;
+.experience {
+    padding: 40px 20px;
+  
+    h1 {
+      color: #ff3838;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  
+    .experience-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(78, 70, 70, 0.8);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+  
+      .experience-content {
         padding: 20px;
+      }
     }
-    & .experience-content{
-        padding: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+  }
+  

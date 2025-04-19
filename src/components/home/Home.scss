@@ -2,30 +2,57 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background-color: #000; /* Changed to black */
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
 
     & .home-left {
+        flex: 1;
         & img {
-            width: 400px;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
     }
 
     & .home-right {
-        width: 50%;
+        flex: 1.5;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
 
         & h1 {
-            font-size: 2rem;
-            & span {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff; /* Changed text color to white for contrast */
+            line-height: 1.2;
+            span {
                 color: #ff3838;
             }
         }
 
+        & h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #bbb; /* Lighter gray for contrast */
+        }
+
         & p {
+            font-size: 1rem;
+            color: #ccc; /* Light gray for readability */
+            line-height: 1.7;
             text-align: justify;
+            font-weight: 400;
         }
     }
 }
@@ -33,17 +60,21 @@
 @media (max-width: 768px) {
     .home {
         flex-direction: column;
+        padding: 20px;
+        align-items: center;
 
-        & .home-left{
-            & img{
-                width: 300px;
+        & .home-left {
+            margin-bottom: 20px;
+            & img {
+                width: 80%;
+                max-width: 300px;
             }
         }
 
         & .home-right {
-            width: 90%;
-            & h1{
-                font-size: 1.8rem;
+            width: 100%;
+            & h1 {
+                font-size: 2rem;
             }
 
             & h2 {
