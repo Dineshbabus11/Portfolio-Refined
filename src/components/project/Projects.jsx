@@ -6,11 +6,22 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
 
-// React Icons
-import { FaUniversity, FaPizzaSlice, FaUtensils, FaSun, FaQuestionCircle, FaQrcode, FaMoneyBillWave, FaFilter, FaWeight } from 'react-icons/fa';
+import { FaUniversity, FaPizzaSlice, FaUtensils, FaSun, FaQuestionCircle, FaQrcode, FaMoneyBillWave, FaFilter, FaWeight, FaUserGraduate, FaUserTie } from 'react-icons/fa';
 
 export const Projects = () => {
   const projects = [
+    {
+      title: 'Alumni Management System',
+      tools: 'React.js, Material UI',
+      link: 'https://unitidealumni.netlify.app/',
+      icon: <FaUserGraduate className="project-icon" />
+    },
+    {
+      title: 'Secondary Portfolio',
+      tools: 'React.js, SCSS',
+      link: 'https://dbsportfolio.netlify.app/',
+      icon: <FaUserTie className="project-icon" />
+    },        
     {
       title: 'ATM Management System',
       tools: 'Java OOPs',
